@@ -1,77 +1,55 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# custom-tokenizer
-=======
-# React + TypeScript + Vite
+# Custom Tokenizer Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Custom Tokenizer Tool** — a simple, interactive tokenizer built with TypeScript and React! This project lets you see how raw text is broken down into tokens and mapped to unique IDs, and then decode those IDs back into text. Perfect for understanding the basics of tokenization in NLP (Natural Language Processing).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Custom Vocabulary** with special tokens `<PAD>` and `<UNK>`
+- Tokenizes input text into words, spaces, and punctuation using regex
+- Learns vocabulary dynamically from your input text
+- Encodes tokens into unique numeric IDs
+- Decodes sequences of token IDs back into readable text
+- Clean, responsive React UI with live token-to-ID mapping and encoding/decoding controls
+- Reset functionality to clear vocabulary and start fresh
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## How to Use
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. **Type or paste any text** into the text box.
+2. Click **Encode Text** to tokenize and encode the text.
+3. View the list of tokens and their assigned IDs.
+4. Enter a comma-separated list of token IDs in the decoding box.
+5. Click **Decode** to see the original text from those IDs.
+6. Use **Reset** anytime to clear everything and start over.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Technologies Used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- TypeScript — type-safe JavaScript for robust code
+- React — for building the interactive user interface
+- Vite — lightning-fast development environment and build tool
+- Tailwind CSS — utility-first styling for a clean, modern look
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
->>>>>>> 42903cf (custom token)
-=======
-# custom-tokenizer
->>>>>>> 55533562130071974d2e111de372741681edf67a
+---
+
+## Project Structure
+
+- `CustomTokenizer.ts` — core tokenizer class handling vocab, encode, decode
+- `TokenizerForm.tsx` — React component for the interactive form and UI
+- `App.tsx` — main app component that loads the form
+- `vite.config.ts` — config for Vite with React and Tailwind plugins
+- `package.json` — dependencies and scripts
+
+---
+
+## Installation & Running Locally
+
+```bash
+git clone https://github.com/yourusername/custom-tokenizer.git
+cd custom-tokenizer
+npm install
+npm run dev
