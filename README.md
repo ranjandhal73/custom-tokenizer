@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # custom-tokenizer
 =======
 # React + TypeScript + Vite
@@ -71,3 +72,6 @@ export default tseslint.config([
 ])
 ```
 >>>>>>> 42903cf (custom token)
+=======
+# custom-tokenizer
+>>>>>>> 55533562130071974d2e111de372741681edf67a
